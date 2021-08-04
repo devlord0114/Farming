@@ -1084,8 +1084,6 @@ contract Farming2local is Ownable {
 
     // The 2LC TOKEN!
     LocalToken public local;
-    // Dev address.
-    address public devaddr;
     // 2LC tokens created per block.
     uint256 public localPerBlock;
     // Bonus muliplier for early local makers.
@@ -1108,13 +1106,11 @@ contract Farming2local is Ownable {
 
     constructor(
         LocalToken _local,
-        address _devaddr,
         address _feeAddress,
         uint256 _localPerBlock,
         uint256 _startBlock
     ) public {
         local = _local;
-        devaddr = _devaddr;
         feeAddress = _feeAddress;
         localPerBlock = _localPerBlock;
         startBlock = _startBlock;
@@ -1193,7 +1189,6 @@ contract Farming2local is Ownable {
         }
         uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
         uint256 localReward = multiplier.mul(localPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
-        local.mint(devaddr, localReward.div(10));
         local.mint(address(this), localReward);
         pool.accLocalPerShare = pool.accLocalPerShare.add(localReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
@@ -1263,12 +1258,7 @@ contract Farming2local is Ownable {
         }
     }
 
-    // Update dev address by the previous dev.
-    function dev(address _devaddr) public {
-        require(msg.sender == devaddr, "dev: wut?");
-        devaddr = _devaddr;
-    }
-
+    // Update fee address
     function setFeeAddress(address _feeAddress) public{
         require(msg.sender == feeAddress, "setFeeAddress: FORBIDDEN");
         feeAddress = _feeAddress;
