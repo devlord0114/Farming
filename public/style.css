@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "Swis721 BT";
+  src: local("Swis721 BT"),
+    url("./assets/fonts/swiss.ttf") format("truetype"),
+    url("./assets/fonts/swissb.ttf") format("truetype"),
+    url("./assets/fonts/swissbi.ttf") format("truetype"),
+    url("./assets/fonts/swissbo.ttf") format("truetype"),
+    url("./assets/fonts/swissc.ttf") format("truetype"),
+    url("./assets/fonts/swisscb.ttf") format("truetype"),
+    url("./assets/fonts/swisscbi.ttf") format("truetype"),
+    url("./assets/fonts/swisscb.ttf") format("truetype"),
+    url("./assets/fonts/swisscbo.ttf") format("truetype"),
+    url("./assets/fonts/swissci.ttf") format("truetype"),
+    url("./assets/fonts/swissck.ttf") format("truetype"),
+    url("./assets/fonts/swisscki.ttf") format("truetype"),
+    url("./assets/fonts/swisscl.ttf") format("truetype"),
+    url("./assets/fonts/swisscli.ttf") format("truetype"),
+    url("./assets/fonts/swisse.ttf") format("truetype"),
+    url("./assets/fonts/swisseb.ttf") format("truetype"),
+    url("./assets/fonts/swisseb.ttf") format("truetype"),
+    url("./assets/fonts/swissek.ttf") format("truetype"),
+    url("./assets/fonts/swissel.ttf") format("truetype"),
+    url("./assets/fonts/swissi.ttf") format("truetype"),
+    url("./assets/fonts/swissk.ttf") format("truetype"),
+    url("./assets/fonts/swisski.ttf") format("truetype"),
+    url("./assets/fonts/swisski.ttf") format("truetype"),
+    url("./assets/fonts/swissko.ttf") format("truetype"),
+    url("./assets/fonts/swissl.ttf") format("truetype"),
+    url("./assets/fonts/swissli.ttf") format("truetype");
+  font-weight: normal;
+}
