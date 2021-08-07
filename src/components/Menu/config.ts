@@ -57,17 +57,17 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Yield Farming',
-        href: 'https://farms.2local.io',
+        href: '/',
         icon: 'BNB2LCIcon',
       },
       {
         label: 'Trading Pools',
-        href: 'https://trading.2local.io',
+        href: 'https://trading.2local.io/',
         icon: 'BETH2LCIcon',
       },
       {
         label: 'Staking Pools',
-        href: 'https://staking.2local.io',
+        href: 'https://staking.2local.io/',
         icon: 'BUSD2LCIcon',
       },
     ],
@@ -79,7 +79,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Multi-send',
-        href: 'https://msend.2local.io',
+        href: 'https://msend.2local.io/',
         icon: 'BNB2LCIcon',
       },
     ],
