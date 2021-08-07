@@ -33,9 +33,9 @@ const CakeStats = () => {
   const cakeSupply = getBalanceNumber(circSupply);
   const marketCap = eggPrice.times(circSupply);
 
-  let ebitempuraPerBlock = 0;
-  if(farms && farms[0] && farms[0].ebitempuraPerBlock){
-    ebitempuraPerBlock = new BigNumber(farms[0].ebitempuraPerBlock).div(new BigNumber(10).pow(18)).toNumber();
+  let localPerBlock = 0;
+  if(farms && farms[0] && farms[0].localPerBlock){
+    localPerBlock = new BigNumber(farms[0].localPerBlock).div(new BigNumber(10).pow(18)).toNumber();
   }
 
   return (
@@ -43,7 +43,7 @@ const CakeStats = () => {
       <CardBody>
         <Heading size="xl" mb="24px">
           {/* <div className="token-tag">DEFLACTIONARY</div> */}
-          {TranslateString(53401, 'EBITEMPURA Stats')}
+          {TranslateString(53401, '2LC Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">{TranslateString(10005, 'Market Cap')}</Text>
@@ -66,8 +66,8 @@ const CakeStats = () => {
           {/* {cakeSupply && <CardValue fontSize="14px" value={0} decimals={0} />} */}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(5400, 'New EBITEMPURA/block')}</Text>
-          <Text bold fontSize="14px">{ebitempuraPerBlock}</Text>
+          <Text fontSize="14px">{TranslateString(5400, 'New 2LC/block')}</Text>
+          <Text bold fontSize="14px">{localPerBlock}</Text>
           {/* <Text bold fontSize="14px">0.1</Text> */}
         </Row>
       </CardBody>

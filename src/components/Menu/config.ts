@@ -4,26 +4,26 @@ const config: MenuEntry[] = [
   {
     label: 'Exchange',
     icon: 'ExchangeIcon',
-    href: '/',
+    href: 'https://exchange.2local.io/',
     items: [
       {
         label: 'BNB',
-        href: '/',
+        href: 'https://exchange.2local.io/',
         icon: 'BNBIcon',
         items: [
           {
             label: '2LC',
-            href: '/?coin=BNB&token=2LC',
+            href: 'https://exchange.2local.io/?coin=BNB&token=2LC',
             icon: 'L2LIcon',
           },
           {
             label: 'BUSD',
-            href: '/?coin=BNB&token=BUSD',
+            href: 'https://exchange.2local.io/?coin=BNB&token=BUSD',
             icon: 'BUSDIcon',
           },
           {
             label: 'BETH',
-            href: '/?coin=BNB&token=BETH',
+            href: 'https://exchange.2local.io/?coin=BNB&token=BETH',
             icon: 'BETHIcon',
           },
         ],

@@ -107,7 +107,7 @@ const FarmedStakingCard = () => {
           <FarmButtons>
           <Button style={{marginRight:'15px'}}>
             <a href='https://exchange.ebitempuraswap.com/#/swap?outputCurrency=0x37781b87619722e1765dd4864894931bebD1BB3C'>
-              {TranslateString(999, 'Buy EBITEMPURA')}
+              {TranslateString(999, 'Buy 2LC')}
             </a>
           </Button>
           <Button disabled={requestedApproval} onClick={handleApprove}>
@@ -117,14 +117,14 @@ const FarmedStakingCard = () => {
           </FarmButtons>
         </Flex>
         <Block>
-          <Label>{TranslateString(544, 'EBITEMPURA to Harvest')}</Label>
+          <Label>{TranslateString(544, '2LC to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum}/>
           <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
           {/* <CakeHarvestBalance earningsSum={0}/> */}
           {/* <Label>~$0</Label> */}
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'EBITEMPURA in Wallet')}</Label>
+          <Label>{TranslateString(546, '2LC in Wallet')}</Label>
           <CakeWalletBalance cakeBalance={cakeBalance} />
           <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
           {/* <CakeWalletBalance cakeBalance={0} />
@@ -139,7 +139,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting EBITEMPURA')
+                ? TranslateString(548, 'Collecting 2LC')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
                 {/* : TranslateString(999, `Harvest all 0`)} */}
                 </Button>

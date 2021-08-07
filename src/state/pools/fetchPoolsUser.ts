@@ -93,28 +93,7 @@ export const fetchUserPendingRewards = async (account) => {
   )
 
   // Cake / Cake pool
-  const pendingReward = await masterChefContract.methods.pendingEbitempura('0', account).call()
+  const pendingReward = await masterChefContract.methods.pendingLocal('0', account).call()
 
   return { ...pendingRewards, 0: new BigNumber(pendingReward).toJSON() }
-}
-
-
-export const fetchRewardAddress = async (account) => {
-  const calls = nonMasterPools.map((p) => ({
-    address: p.contractAddress[CHAIN_ID],
-    name: 'rewardToken',
-  }))
-  const res = await multicall(sousChefABI, calls)
-
-  const pendingRewards = nonMasterPools.reduce(
-    (acc, pool, index) => ({
-      ...acc,
-      [pool.sousId]:res[index],
-    }),
-    {},
-  )
-
-  // Cake / Cake pool
-
-  return { ...pendingRewards }
 }

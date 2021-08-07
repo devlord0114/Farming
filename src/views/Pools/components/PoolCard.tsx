@@ -120,7 +120,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <Question
             text={TranslateString(
               9999,
-              'Remember to withdraw your rewards before unstake. Rewards (1000 EBITEMPURA) are provided directly from the Dev Vault.'
+              'Remember to withdraw your rewards before unstake. Rewards (1000 2LC) are provided directly from the Dev Vault.'
             )}
           />
         </Flex>

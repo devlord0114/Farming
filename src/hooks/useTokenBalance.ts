@@ -3,10 +3,9 @@ import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
 import cakeABI from 'config/abi/cake.json'
-import treeABI from 'config/abi/tree.json'
 import { getContract } from 'utils/web3'
 import { getTokenBalance } from 'utils/erc20'
-import { getCakeAddress, getTreeAddress } from 'utils/addressHelpers'
+import { getCakeAddress } from 'utils/addressHelpers'
 import useRefresh from './useRefresh'
 
 const useTokenBalance = (tokenAddress: string) => {
@@ -45,23 +44,6 @@ export const useTotalSupply = () => {
   return totalSupply
 }
 
-export const useTotalSupplyTree = () => {
-  const { slowRefresh } = useRefresh()
-  const [totalSupply, setTotalSupply] = useState<BigNumber>()
-
-  useEffect(() => {
-    async function fetchTotalSupply() {
-      const cakeContract = getContract(treeABI, getTreeAddress())
-      const supply = await cakeContract.methods.totalSupply().call()
-      setTotalSupply(new BigNumber(supply))
-    }
-
-    fetchTotalSupply()
-  }, [slowRefresh])
-
-  return totalSupply
-}
-
 export const useBurnedBalance = (tokenAddress: string) => {
   const [balance, setBalance] = useState(new BigNumber(0))
   const { slowRefresh } = useRefresh()
@@ -69,23 +51,6 @@ export const useBurnedBalance = (tokenAddress: string) => {
   useEffect(() => {
     const fetchBalance = async () => {
       const cakeContract = getContract(cakeABI, getCakeAddress())
-      const bal = await cakeContract.methods.balanceOf('0x000000000000000000000000000000000000dEaD').call()
-      setBalance(new BigNumber(bal))
-    }
-
-    fetchBalance()
-  }, [tokenAddress, slowRefresh])
-
-  return balance
-}
-
-export const useBurnedBalanceTree = (tokenAddress: string) => {
-  const [balance, setBalance] = useState(new BigNumber(0))
-  const { slowRefresh } = useRefresh()
-
-  useEffect(() => {
-    const fetchBalance = async () => {
-      const cakeContract = getContract(treeABI, getTreeAddress())
       const bal = await cakeContract.methods.balanceOf('0x000000000000000000000000000000000000dEaD').call()
       setBalance(new BigNumber(bal))
     }

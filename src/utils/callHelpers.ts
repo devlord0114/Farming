@@ -1,6 +1,5 @@
 import BigNumber from 'bignumber.js'
 import { ethers } from 'ethers'
-// import Data from 'components/Data'
 
 export const approve = async (lpContract, masterChefContract, account) => {
   return lpContract.methods
@@ -9,15 +8,8 @@ export const approve = async (lpContract, masterChefContract, account) => {
 }
 
 export const stake = async (masterChefContract, pid, amount, account) => {
-  const referral = '0x0000000000000000000000000000000000000000'
-
-  // const refaddress = Data.myreferrerdata
-
-  // if (refaddress != null) referral = refaddress
-
-
   return masterChefContract.methods
-    .deposit(pid, new BigNumber(amount).times(new BigNumber(10).pow(18)).toString(), referral)
+    .deposit(pid, new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
     .send({ from: account })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
@@ -87,13 +79,8 @@ export const sousEmegencyUnstake = async (sousChefContract, amount, account) => 
 }
 
 export const harvest = async (masterChefContract, pid, account) => {
-  const referral = '0x0000000000000000000000000000000000000000'
-
-  // const refaddress = Data.myreferrerdata
-  // if (refaddress != null) referral = refaddress
-
   return masterChefContract.methods
-    .deposit(pid, '0', referral)
+    .deposit(pid, '0')
     .send({ from: account })
     .on('transactionHash', (tx) => {
       return tx.transactionHash

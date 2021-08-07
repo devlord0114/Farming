@@ -9,8 +9,8 @@ export interface Farm extends FarmConfig {
   poolWeight?: number
   depositFeeBP?: number
   harvestInterval?: number
-  ebitempuraPerBlock?: number
-    userData?: {
+  localPerBlock?: number
+  userData?: {
     allowance: BigNumber
     tokenBalance: BigNumber
     stakedBalance: BigNumber

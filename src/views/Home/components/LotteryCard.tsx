@@ -70,7 +70,7 @@ const FarmedStakingCard = () => {
         <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} />
         <Block>
           <CakeWinnings />
-          <Label>{TranslateString(552, 'EBITEMPURA to Collect')}</Label>
+          <Label>{TranslateString(552, '2LC to Collect')}</Label>
         </Block>
         <Block>
           <LotteryJackpot />

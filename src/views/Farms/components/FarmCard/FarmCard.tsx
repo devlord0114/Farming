@@ -106,12 +106,11 @@ interface FarmCardProps {
   removed: boolean
   cakePrice?: BigNumber
   bnbPrice?: BigNumber
-  treePrice?: BigNumber
   ethereum?: provider
   account?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, treePrice, ethereum, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -132,11 +131,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.TREE) {
-      return treePrice.times(farm.lpTotalInQuoteToken)
-    }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, treePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
@@ -144,9 +140,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   const lpLabel = farm.lpSymbol
   const earnLabel = '2LC'
-  const farmAPY =
-    farm.apy &&
-    farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
+  const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     })
@@ -155,7 +149,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   return (
     <FCard>
-      {/* {farm.tokenSymbol === 'EBITEMPURA' && <StyledCardAccent />} */}
+      {/* {farm.tokenSymbol === '2LC' && <StyledCardAccent />} */}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}

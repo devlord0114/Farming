@@ -26,10 +26,6 @@ export enum QuoteToken {
   'BUSD' = 'BUSD',
   'TWT' = 'TWT',
   'UST' = 'UST',
-  'TREE' = 'TREE',
-  'SEED' = 'SEED',
-  'SLIME' = 'SLIME',
-  'ETH' = 'ETH',
 }
 
 export enum PoolCategory {
@@ -52,7 +48,6 @@ export interface FarmConfig {
   quoteTokenSymbol: QuoteToken
   quoteTokenAdresses: Address
   multiplier?: string
-  isPartner?: boolean
   isTokenOnly?: boolean
   isCommunity?: boolean
   risk: number
@@ -72,21 +67,12 @@ export interface PoolConfig {
   stakingTokenAddress?: string
   contractAddress: Address
   poolCategory: PoolCategory
-  projectLink: string,
-  withwithdrawFee?: boolean,
-  withdrawFee?: number,
-  isLPReward ?: boolean,  isLPStake ?: boolean,
-  withwithdrawDepositFee?:boolean,
-  depositFee?:number,
-  noApy?:boolean,
+  projectLink: string
   tokenPerBlock: string
   sortOrder?: number
   harvest?: boolean
   isFinished?: boolean
   tokenDecimals: number
-  startBlock? :number
-  endBlock? : number
-  slimeRounding? : number
 }
 
 export type Nft = {

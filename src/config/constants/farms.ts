@@ -3,41 +3,39 @@ import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
   {
-    pid: 0,
+    pid: 5,
     risk: 5,
     lpSymbol: '2LC-BNB',
     lpAddresses: {
       97: '',
-      56: '0xFB6D43B1EbDCce953664e389C77eD601e1B00049',
+      56: '0x742295218a374cfdc09adaa9ba1133e45703e6da',
     },
     tokenSymbol: '2LC',
     tokenAddresses: {
       97: '',
-      56: '0x37781b87619722e1765dd4864894931bebD1BB3C',
+      56: '0x45be9d5f6f746d7b5cc2a94804e7a98e81835126',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-    isPartner: false,
   },
   {
-    pid: 1,
+    pid: 4,
     risk: 5,
     lpSymbol: '2LC-BUSD',
     lpAddresses: {
       97: '',
-      56: '0x0e8532645ad6d45648adfdf798d6d24c4bbf9d94',
+      56: '0x0936513a5f8312df10d693bdf8af627051da43bc',
     },
     tokenSymbol: '2LC',
     tokenAddresses: {
       97: '',
-      56: '0x37781b87619722e1765dd4864894931bebD1BB3C',
+      56: '0x45be9d5f6f746d7b5cc2a94804e7a98e81835126',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-    isPartner: false,
   },
   {
-    pid: 4,
+    pid: 2,
     risk: 3,
     lpSymbol: 'BNB-BUSD',
     lpAddresses: {
@@ -51,7 +49,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-    isPartner: false,
   },
   // {
   //   pid: 5,

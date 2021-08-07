@@ -22,7 +22,6 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
     return getFullDisplayBalance(max)
   }, [max])
 
-  console.log("123123 val = ", max.toNumber())
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       setVal(e.currentTarget.value)

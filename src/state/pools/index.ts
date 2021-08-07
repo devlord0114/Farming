@@ -6,7 +6,7 @@ import {
   fetchPoolsAllowance,
   fetchUserBalances,
   fetchUserStakeBalances,
-  fetchUserPendingRewards,fetchRewardAddress
+  fetchUserPendingRewards,
 } from './fetchPoolsUser'
 import { PoolsState, Pool } from '../types'
 
@@ -63,7 +63,6 @@ export const fetchPoolsUserDataAsync = (account) => async (dispatch) => {
   const stakingTokenBalances = await fetchUserBalances(account)
   const stakedBalances = await fetchUserStakeBalances(account)
   const pendingRewards = await fetchUserPendingRewards(account)
-  const rewardAddress = await fetchRewardAddress(account)
 
   const userData = poolsConfig.map((pool) => ({
     sousId: pool.sousId,
@@ -71,7 +70,6 @@ export const fetchPoolsUserDataAsync = (account) => async (dispatch) => {
     stakingTokenBalance: stakingTokenBalances[pool.sousId],
     stakedBalance: stakedBalances[pool.sousId],
     pendingReward: pendingRewards[pool.sousId],
-    rewardAddress : rewardAddress[pool.sousId]
   }))
 
   dispatch(setPoolsUserData(userData))

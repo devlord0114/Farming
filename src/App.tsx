@@ -50,24 +50,6 @@ const App: React.FC = () => {
             <Route path="/launch-pools">
              <Pools />
             </Route>
-             {/* <Redirect to="/pools" /> */}
-            {/* <Route path="/pools"> */}
-             {/* <Pools /> */}
-            {/* </Route> */}
-            {/* <Route path="/ifo">
-             <Ifos />
-            </Route> */}
-            {/* <Route path="/nft"> */}
-             {/* <Nft /> */}
-            {/* </Route> */}
-            {/* Redirect */}
-            {/* <Route path="/staking"> */}
-             {/* <Redirect to="/pools" /> */}
-            {/* </Route> */}
-            {/* <Route path="/syrup"> */}
-             {/* <Redirect to="/pools" /> */}
-            {/* </Route> */}
-            404
             <Route component={NotFound} />
           </Switch>
         </Suspense>

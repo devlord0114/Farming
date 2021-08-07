@@ -20,10 +20,10 @@ const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
 `
 const EarnAssetCard = () => {
-  const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('EBITEMPURA'))
+  const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('2LC'))
   const latestPools: Pool[] = orderBy(activeNonCakePools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 3)
-  // Always include EBITEMPURA
-  const assets = ['EBITEMPURA', ...latestPools.map((pool) => pool.tokenName)].join(', ')
+  // Always include 2LC
+  const assets = ['2LC', ...latestPools.map((pool) => pool.tokenName)].join(', ')
 
   return (
     <StyledFarmStakingCard>

@@ -75,7 +75,7 @@
     {
       "data": {
         "stringId": 304,
-        "text": "Total EBITEMPURA burned since launch"
+        "text": "Total 2LC burned since launch"
       }
     },
     {
@@ -123,7 +123,7 @@
     {
       "data": {
         "stringId": 320,
-        "text": "Stake LP tokens to earn EBITEMPURA"
+        "text": "Stake LP tokens to earn 2LC"
       }
     },
     {
@@ -153,7 +153,7 @@
     {
       "data": {
         "stringId": 334,
-        "text": "Every time you stake and unstake EBITEMPURA tokens, the contract will automatically harvest EBITEMPURA rewards for you!"
+        "text": "Every time you stake and unstake 2LC tokens, the contract will automatically harvest 2LC rewards for you!"
       }
     },
     {
@@ -243,7 +243,7 @@
     {
       "data": {
         "stringId": 380,
-        "text": "1 EBITEMPURA = 1 SYRUP"
+        "text": "1 2LC = 1 SYRUP"
       }
     },
     {
@@ -291,7 +291,7 @@
     {
       "data": {
         "stringId": 400,
-        "text": "SYRUP holders proportionally split 25% of EBITEMPURA block emissions each day (10 EBITEMPURA per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 25% of 2LC block emissions each day (10 2LC per block), Rewards are distributed each block."
       }
     },
     {
@@ -351,13 +351,13 @@
     {
       "data": {
         "stringId": 424,
-        "text": "%num% EBITEMPURA"
+        "text": "%num% 2LC"
       }
     },
     {
       "data": {
         "stringId": 426,
-        "text": "Spend EBITEMPURA to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
+        "text": "Spend 2LC to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
       }
     },
     {
@@ -435,19 +435,19 @@
     {
       "data": {
         "stringId": 454,
-        "text": "%num% EBITEMPURA Available"
+        "text": "%num% 2LC Available"
       }
     },
     {
       "data": {
         "stringId": 456,
-        "text": "Your amount must be a multiple of 0.15 EBITEMPURA"
+        "text": "Your amount must be a multiple of 0.15 2LC"
       }
     },
     {
       "data": {
         "stringId": 458,
-        "text": "1 Ticket = 0.15 EBITEMPURA"
+        "text": "1 Ticket = 0.15 2LC"
       }
     },
     {
@@ -495,7 +495,7 @@
     {
       "data": {
         "stringId": 478,
-        "text": "Ticket purchases are final. Your EBITEMPURA cannot be returned to you after buying tickets."
+        "text": "Ticket purchases are final. Your 2LC cannot be returned to you after buying tickets."
       }
     },
     {
@@ -507,7 +507,7 @@
     {
       "data": {
         "stringId": 482,
-        "text": "EBITEMPURA prizes to be claimed"
+        "text": "2LC prizes to be claimed"
       }
     },
     {
@@ -543,13 +543,13 @@
     {
       "data": {
         "stringId": 494,
-        "text": "Approve EBITEMPURA"
+        "text": "Approve 2LC"
       }
     },
     {
       "data": {
         "stringId": 496,
-        "text": "SYRUP holders proportionally split 40% of EBITEMPURA block emissions each day (10 EBITEMPURA per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 40% of 2LC block emissions each day (10 2LC per block), Rewards are distributed each block."
       }
     },
     {
@@ -567,19 +567,19 @@
     {
       "data": {
         "stringId": 504,
-        "text": "You\u2019ll pay for the new tokens using EBITEMPURA-BNB LP tokens, which means you need to stake equal amounts of EBITEMPURA and BNB in a liquidity pool to take part."
+        "text": "You\u2019ll pay for the new tokens using 2LC-BNB LP tokens, which means you need to stake equal amounts of 2LC and BNB in a liquidity pool to take part."
       }
     },
     {
       "data": {
         "stringId": 506,
-        "text": "Get EBITEMPURA-BNB LP >"
+        "text": "Get 2LC-BNB LP >"
       }
     },
     {
       "data": {
         "stringId": 508,
-        "text": "The project gets the BNB, Goose Finance burns the EBITEMPURA."
+        "text": "The project gets the BNB, Goose Finance burns the 2LC."
       }
     },
     {
@@ -645,13 +645,13 @@
     {
       "data": {
         "stringId": 534,
-        "text": "EBITEMPURA Stats"
+        "text": "2LC Stats"
       }
     },
     {
       "data": {
         "stringId": 53401,
-        "text": "EBITEMPURA Stats"
+        "text": "2LC Stats"
       }
     },
     {
@@ -669,7 +669,7 @@
     {
       "data": {
         "stringId": 540,
-        "text": "New EBITEMPURA/block"
+        "text": "New 2LC/block"
       }
     },
     {
@@ -681,19 +681,19 @@
     {
       "data": {
         "stringId": 544,
-        "text": "EBITEMPURA to Harvest"
+        "text": "2LC to Harvest"
       }
     },
     {
       "data": {
         "stringId": 546,
-        "text": "EBITEMPURA in Wallet"
+        "text": "2LC in Wallet"
       }
     },
     {
       "data": {
         "stringId": 548,
-        "text": "Collecting EBITEMPURA"
+        "text": "Collecting 2LC"
       }
     },
     {
@@ -705,7 +705,7 @@
     {
       "data": {
         "stringId": 552,
-        "text": "EBITEMPURA to Collect"
+        "text": "2LC to Collect"
       }
     },
     {
@@ -759,7 +759,7 @@
     {
       "data": {
         "stringId": 576,
-        "text": "EBITEMPURA Finance"
+        "text": "2LC Finance"
       }
     },
     {
@@ -771,7 +771,7 @@
     {
       "data": {
         "stringId": 580,
-        "text": "Stake EBITEMPURA to earn new tokens."
+        "text": "Stake 2LC to earn new tokens."
       }
     },
     {
@@ -789,7 +789,7 @@
     {
       "data": {
         "stringId": 586,
-        "text": "EBITEMPURA to burn (USD)"
+        "text": "2LC to burn (USD)"
       }
     },
     {
@@ -801,7 +801,7 @@
     {
       "data": {
         "stringId": 590,
-        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest EBITEMPURA rewards for you!"
+        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest 2LC rewards for you!"
       }
     },
     {
@@ -819,13 +819,13 @@
     {
       "data": {
         "stringId": 596,
-        "text": "Buy EBITEMPURA and BNB tokens"
+        "text": "Buy 2LC and BNB tokens"
       }
     },
     {
       "data": {
         "stringId": 598,
-        "text": "Get EBITEMPURA-BNB LP tokens by adding EBITEMPURA and BNB liquidity"
+        "text": "Get 2LC-BNB LP tokens by adding 2LC and BNB liquidity"
       }
     },
     {
@@ -837,7 +837,7 @@
     {
       "data": {
         "stringId": 602,
-        "text": "While the sale is live, commit your EBITEMPURA-LP tokens to buy the IFO tokens"
+        "text": "While the sale is live, commit your 2LC-LP tokens to buy the IFO tokens"
       }
     },
     {
@@ -873,7 +873,7 @@
     {
       "data": {
         "stringId": 614,
-        "text": "Trade in for EBITEMPURA, or keep for your collection!"
+        "text": "Trade in for 2LC, or keep for your collection!"
       }
     },
     {
@@ -915,7 +915,7 @@
     {
       "data": {
         "stringId": 628,
-        "text": "When you trade in this NFT to receive EBITEMPURA, you will lose access to it forever!"
+        "text": "When you trade in this NFT to receive 2LC, you will lose access to it forever!"
       }
     },
     {
@@ -945,7 +945,7 @@
     {
       "data": {
         "stringId": 638,
-        "text": "Winners can trade in their NFTs for a EBITEMPURA value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
+        "text": "Winners can trade in their NFTs for a 2LC value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
       }
     },
     {
@@ -987,7 +987,7 @@
     {
       "data": {
         "stringId": 654,
-        "text": "Trade in for EBITEMPURA"
+        "text": "Trade in for 2LC"
       }
     },
     {
@@ -1113,7 +1113,7 @@
     {
       "data": {
         "stringId": 696,
-        "text": "Stake LP tokens to earn EBITEMPURA"
+        "text": "Stake LP tokens to earn 2LC"
       }
     },
     {
@@ -1155,13 +1155,13 @@
     {
       "data": {
         "stringId": 708,
-        "text": "The EBITEMPURA Lottery"
+        "text": "The 2LC Lottery"
       }
     },
     {
       "data": {
         "stringId": 710,
-        "text": "Buy tickets with EBITEMPURA"
+        "text": "Buy tickets with 2LC"
       }
     },
     {
@@ -1233,7 +1233,7 @@
     {
       "data": {
         "stringId": 10002,
-        "text": "Stake tokens to earn EBITEMPURA"
+        "text": "Stake tokens to earn 2LC"
       }
     },
     {
