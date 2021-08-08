@@ -1189,7 +1189,6 @@ contract Farming2local is Ownable {
         }
         uint256 multiplier = getMultiplier(pool.lastRewardBlock, block.number);
         uint256 localReward = multiplier.mul(localPerBlock).mul(pool.allocPoint).div(totalAllocPoint);
-        local.mint(address(this), localReward);
         pool.accLocalPerShare = pool.accLocalPerShare.add(localReward.mul(1e12).div(lpSupply));
         pool.lastRewardBlock = block.number;
     }
@@ -1259,7 +1258,7 @@ contract Farming2local is Ownable {
     }
 
     // Update fee address
-    function setFeeAddress(address _feeAddress) public{
+    function setFeeAddress(address _feeAddress) public {
         require(msg.sender == feeAddress, "setFeeAddress: FORBIDDEN");
         feeAddress = _feeAddress;
     }
