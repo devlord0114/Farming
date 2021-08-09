@@ -1,4 +1,4 @@
-# Yield_Farm_2LC/public/logo.png 2local Yield Farm
+# [Yield_Farm_2LC/public/logo.png] 2local Yield Farm
 
 
 
