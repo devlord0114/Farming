@@ -1,4 +1,4 @@
-# 🥞 2local Yield Farm
+# 2local Yield Farm
 
 
 
