@@ -1,6 +1,6 @@
-# 🥞 2local Yield Farm Frontend
+# 🥞 2local Yield Farm
 
-[![Netlify Status](https://app.netlify.com/sites/pancake-prod/deploys)
+
 
 This project contains the main features of the pancake application.
 
