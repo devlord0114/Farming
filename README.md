@@ -1,4 +1,4 @@
-# 🥞 Pancake Frontend
+# 🥞 2local Yield Farm Frontend
 
 [![Netlify Status](https://app.netlify.com/sites/pancake-prod/deploys)
 
