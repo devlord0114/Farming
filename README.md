@@ -1,4 +1,4 @@
-# 2local Yield Farm !!![2local_symbol-32x32-margin-01](https://user-images.githubusercontent.com/88624942/128998757-10c945de-67d8-4bbd-86df-f346a6d8236a.png)
+# 2local Yield Farm [2local_symbol-32x32-margin-01](https://user-images.githubusercontent.com/88624942/128998757-10c945de-67d8-4bbd-86df-f346a6d8236a.png)
 
 
 
