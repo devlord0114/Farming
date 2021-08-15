@@ -1,11 +1,11 @@
 import React, { useEffect, useCallback, useState } from 'react'
-import { Route, useRouteMatch } from 'react-router-dom'
+import { Route, useHistory, useLocation, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Image, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Button, Image, Heading, Text } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -26,6 +26,19 @@ const Footer = styled.div`
   background-size: cover;
 `
 
+const TopBar = styled.div`
+  display: flex;
+`
+
+const FarmingButton = styled.a`
+  margin-left: 20px;
+  background-color: #4ba0e7;
+  color: #ffffff;
+  padding: 5px 25px;
+  font: normal normal 500 24px/24px Swis721 BT;
+  font-size: 25px;
+`
+
 export const Description = styled(Text)`
   font: normal normal 1000 28px/30px Swis721 BT;
   display: flex;
@@ -36,6 +49,7 @@ export interface FarmsProps {
 }
 
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
+  const history = useHistory();
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
   const farmsLP = useFarms()
@@ -106,7 +120,10 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <div>
       <Page>
-        <Description>{TranslateString(10006, 'Yield Farming')}</Description>
+        <TopBar>
+          <Description>{TranslateString(10006, 'Yield Farming')}</Description>
+          <FarmingButton href="https://exchange.2local.io/#/pool">Get 2LC-LP tokens</FarmingButton>
+        </TopBar>
         {/* <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
           {TranslateString(10000, 'Part of deposit fees will be used to plant real trees around the world')}
         </Heading> */}

@@ -4,11 +4,11 @@ const config: MenuEntry[] = [
   {
     label: 'Exchange',
     icon: 'ExchangeIcon',
-    href: 'https://exchange.2local.io/',
+    href: 'https://exchange.2local.io/#/',
     items: [
       {
         label: 'BNB',
-        href: 'https://exchange.2local.io/',
+        href: 'https://exchange.2local.io/#/',
         icon: 'BNBIcon',
         items: [
           {
@@ -59,10 +59,16 @@ const config: MenuEntry[] = [
     href: 'staking',
     items: [
       {
+        label: 'Liquidity 2LC-LP',
+        href: 'https://exchange.2local.io/#/pool',
+        icon: 'BNB2LCIcon',
+        disabled: false,
+      },
+      {
         label: 'Yield Farming',
         href: '/',
         icon: 'BNB2LCIcon',
-        disabled: true,
+        disabled: false,
       },
       {
         label: 'Trading Pools',
