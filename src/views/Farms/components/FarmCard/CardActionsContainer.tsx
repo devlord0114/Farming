@@ -72,20 +72,20 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   return (
     <Action>
       <Flex>
-        <ColoredText bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
+        <ColoredText textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
           2LC
         </ColoredText>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
+        <Text textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(999, 'Earned')}
         </Text>
       </Flex>
       <HarvestAction earnings={earnings} pid={pid} />
       <Flex>
-        <ColoredText bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
+        <ColoredText textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {lpName}
         </ColoredText>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
+        <Text textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(999, 'Staked')}
         </Text>
       </Flex>

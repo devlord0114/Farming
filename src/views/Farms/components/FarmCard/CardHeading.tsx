@@ -36,7 +36,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
 
   return (
     <Wrapper>
-      <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
+      <Image src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} width={64} height={64} />
       <Flex flexDirection="column" alignItems="flex-start" mt="16px" mb="10px">
         <Flex>
           <Heading mb="4px">{lpLabel}</Heading>
