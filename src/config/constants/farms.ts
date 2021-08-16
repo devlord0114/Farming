@@ -3,12 +3,12 @@ import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
   {
-    pid: 0,
+    pid: 3,
     risk: 5,
     lpSymbol: '2LC-BNB',
     lpAddresses: {
       97: '',
-      56: '0xf4269AcE31E90A15086b16d969f293bEda91BfC4',
+      56: '0x3d6B35f4caed47B3C5c842d4ca8A0C00c615AfA7', // 2LC router
     },
     tokenSymbol: '2LC',
     tokenAddresses: {
@@ -19,12 +19,12 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
-    pid: 1,
+    pid: 4,
     risk: 5,
     lpSymbol: '2LC-BUSD',
     lpAddresses: {
       97: '',
-      56: '0x2187516c3D918d5ceecd037dE285e2539b2d2a8D',
+      56: '0x24CD591b6A62Cc7475De500B18C7705eBaA3EE22', // 2LC router
     },
     tokenSymbol: '2LC',
     tokenAddresses: {
@@ -35,12 +35,12 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   {
-    pid: 2,
+    pid: 5,
     risk: 3,
     lpSymbol: 'BNB-BUSD',
     lpAddresses: {
       97: '',
-      56: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16',
+      56: '0x949285d7eBB74F6D2FDBEFC60d19E619a8A5dfce', // 2LC router
     },
     tokenSymbol: 'BNB',
     tokenAddresses: {

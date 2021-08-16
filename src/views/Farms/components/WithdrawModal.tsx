@@ -33,13 +33,13 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={`Withdraw ${tokenName}`} onDismiss={onDismiss}>
+    <Modal title={`Withdraw ${tokenName}(LP) Tokens`} onDismiss={onDismiss}>
       <TokenInput
         onSelectMax={handleSelectMax}
         onChange={handleChange}
         value={val}
         max={fullBalance}
-        symbol={tokenName}
+        symbol={tokenName.concat('(LP)')}
       />
       <ModalActions>
         <Button variant="secondary" onClick={onDismiss}>
