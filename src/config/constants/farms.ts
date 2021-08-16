@@ -8,7 +8,7 @@ const farms: FarmConfig[] = [
     lpSymbol: '2LC-BNB',
     lpAddresses: {
       97: '',
-      56: '0x3d6B35f4caed47B3C5c842d4ca8A0C00c615AfA7', // 2LC router
+      56: '0xa77924b786314fa4f7e603c10c372da1e779b8d1', // 2LC router
     },
     tokenSymbol: '2LC',
     tokenAddresses: {
@@ -40,7 +40,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'BNB-BUSD',
     lpAddresses: {
       97: '',
-      56: '0x949285d7eBB74F6D2FDBEFC60d19E619a8A5dfce', // 2LC router
+      56: '0x949285d7ebb74f6d2fdbefc60d19e619a8a5dfce', // 2LC router
     },
     tokenSymbol: 'BNB',
     tokenAddresses: {
