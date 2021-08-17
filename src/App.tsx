@@ -6,6 +6,7 @@ import BigNumber from 'bignumber.js'
 import { useFetchPublicData } from 'state/hooks'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
+import Footer from './components/Footer'
 import PageLoader from './components/PageLoader'
 
 // Route-based code splitting
@@ -53,6 +54,7 @@ const App: React.FC = () => {
             <Route component={NotFound} />
           </Switch>
         </Suspense>
+        <Footer />
       </Menu>
     </Router>
   )
