@@ -116,7 +116,7 @@ const config: MenuEntry[] = [
     href: '/nft',
     items: [
       {
-        label: '2LC 2local',
+        label: 'NFT Exchange',
         href: '/nft',
         icon: 'DiamondIcon',
         disabled: true,
