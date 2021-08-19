@@ -29,6 +29,7 @@ const StyledFooter = styled.div`
     font-weight: 500;
   }
 
+  margin-top: 150px;
   margin-bottom: 50px;
   margin-left: 70px;
   width: 90%;

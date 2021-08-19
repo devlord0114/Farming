@@ -193,7 +193,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         <Text bold>{farm.harvestInterval / 3600} Hour(s)</Text>
       </Flex> */}
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
-      {/* <Divider />
+      <Divider />
       <ExpandableSectionButton
         onClick={() => setShowExpandableSection(!showExpandableSection)}
         expanded={showExpandableSection}
@@ -214,7 +214,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           quoteTokenSymbol={quoteTokenSymbol}
           tokenAddresses={tokenAddresses}
         />
-      </ExpandingWrapper> */}
+      </ExpandingWrapper>
     </FCard>
   )
 }

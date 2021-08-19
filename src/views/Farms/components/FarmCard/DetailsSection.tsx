@@ -35,6 +35,10 @@ const StyledLinkExternal = styled(LinkExternal)`
   }
 `
 
+const ColoredLink = styled(Link)`
+  color: #3498DB;
+`
+
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   isTokenOnly,
   bscScanAddress,
@@ -68,9 +72,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         </Flex>
       )}
       <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
+        <ColoredLink external href={bscScanAddress} bold={false}>
           {TranslateString(356, 'View on BscScan')}
-        </Link>
+        </ColoredLink>
       </Flex>
     </Wrapper>
   )
