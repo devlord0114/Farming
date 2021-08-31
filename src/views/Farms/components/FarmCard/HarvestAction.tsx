@@ -26,7 +26,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
   const { onStake } = useStake(pid)
 
   const rawEarningsBalance = getBalanceNumber(earnings)
-  const displayBalance = rawEarningsBalance.toLocaleString()
+  const displayBalance = rawEarningsBalance.toLocaleString('en-US')
 
   return (
     <Flex mb='8px' justifyContent='space-between' alignItems='center'>
@@ -40,7 +40,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
             marginBottom='15px'
             onClick={async () => {
               setPendingTx(true)
-              await onStake(rawEarningsBalance.toString())
+              await onStake(displayBalance)
               setPendingTx(false)
             }}
           >
