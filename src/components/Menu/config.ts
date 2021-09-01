@@ -13,44 +13,36 @@ const config: MenuEntry[] = [
         items: [
           {
             label: '2LC',
-            href: 'https://exchange.2local.io/?coin=BNB&token=2LC',
+            href: 'https://exchange.2local.io/#/?coin=BNB&token=2LC',
             icon: 'L2LIcon',
             disabled: false,
           },
           {
-            label: 'BUSD',
-            href: 'https://exchange.2local.io/?coin=BNB&token=BUSD',
-            icon: 'BUSDIcon',
-            disabled: true,
+            label: 'ETH',
+            href: 'https://exchange.2local.io/#/?coin=BNB&token=ETH',
+            icon: 'ETHIcon',
+            disabled: false,
           },
           {
-            label: 'BETH',
-            href: 'https://exchange.2local.io/?coin=BNB&token=BETH',
-            icon: 'BETHIcon',
-            disabled: true,
+            label: 'CAKE',
+            href: 'https://exchange.2local.io/#/?coin=BNB&token=CAKE',
+            icon: 'CAKEIcon',
+            disabled: false,
+          },
+          {
+            label: 'UNI',
+            href: 'https://exchange.2local.io/#/?coin=BNB&token=UNI',
+            icon: 'UNIIcon',
+            disabled: false,
+          },
+          {
+            label: 'BTCB',
+            href: 'https://exchange.2local.io/#/?coin=BNB&token=BTCB',
+            icon: 'BTCIcon',
+            disabled: false,
           },
         ],
       },
-      // {
-      //   label: "ETH",
-      //   href: "/?coin=eth",
-      //   icon: "ETHIcon",
-      // },
-      // {
-      //   label: "USD",
-      //   href: "/?coin=usd",
-      //   icon: "USDIcon",
-      // },
-      // {
-      //   label: "XLM",
-      //   href: "/?coin=xlm",
-      //   icon: "XLMIcon",
-      // },
-      // {
-      //   label: "BTC",
-      //   href: "/?coin=btc",
-      //   icon: "BTCIcon",
-      // },
     ],
   },
   {
@@ -98,13 +90,25 @@ const config: MenuEntry[] = [
     ],
   },
   {
-    label: 'Airdrops',
+    label: 'Rewards',
     icon: 'AirdropIcon',
     href: '/airdrops',
     items: [
       {
-        label: '2LC 2local',
+        label: 'Airdrops',
         href: '/airdrops',
+        icon: 'L2L2LCIcon',
+        disabled: true,
+      },
+      {
+        label: 'Lottery',
+        href: '/lottery',
+        icon: 'L2L2LCIcon',
+        disabled: true,
+      },
+      {
+        label: 'Prediction',
+        href: '/prediction',
         icon: 'L2L2LCIcon',
         disabled: true,
       },
