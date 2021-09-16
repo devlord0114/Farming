@@ -7,7 +7,7 @@ const config: MenuEntry[] = [
     href: 'https://exchange.2local.io/#/',
     items: [
       {
-        label: 'BNB',
+        label: 'BNB (BEP20)',
         href: 'https://exchange.2local.io/#/',
         icon: 'BNBIcon',
         items: [
@@ -18,7 +18,7 @@ const config: MenuEntry[] = [
             disabled: false,
           },
           {
-            label: 'ETH',
+            label: 'ETH (BEP20)',
             href: 'https://exchange.2local.io/#/?coin=BNB&token=ETH',
             icon: 'ETHIcon',
             disabled: false,
@@ -72,7 +72,7 @@ const config: MenuEntry[] = [
         label: 'Staking Pools',
         href: 'https://staking.2local.io/',
         icon: 'BUSD2LCIcon',
-        disabled: true,
+        disabled: false,
       },
     ],
   },
