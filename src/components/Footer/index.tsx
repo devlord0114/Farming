@@ -118,6 +118,7 @@ export default function Footer() {
         <Item href="https://github.com/2local/Router">Router</Item>
         <Item href="https://github.com/2local/2LC_Token.git">2LC Token</Item>
         <Item href="https://github.com/2local/2local_HeX_ts">Exchange Swap</Item>
+        <Item href="https://github.com/2local/Staking-Pool-Public">Staking Pool</Item>
       </LinkContainer>
       </Container>
       <Divider/>
