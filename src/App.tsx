@@ -11,9 +11,7 @@ import PageLoader from './components/PageLoader'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page'
-const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-const Pools = lazy(() => import('./views/Pools'))
 const NotFound = lazy(() => import('./views/NotFound'))
 
 // This config is required for number formating
@@ -39,17 +37,11 @@ const App: React.FC = () => {
       <Menu>
         <Suspense fallback={<PageLoader />}>
           <Switch>
-            <Route path="/home" exact>
-              <Home />
-            </Route>
             <Route path="/">
               <Farms />
             </Route>
             <Route path="/staking">
               <Farms tokenMode/>
-            </Route>
-            <Route path="/launch-pools">
-             <Pools />
             </Route>
             <Route component={NotFound} />
           </Switch>
