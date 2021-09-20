@@ -50,6 +50,38 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 7,
+    risk: 5,
+    lpSymbol: 'ECOIN-BNB',
+    lpAddresses: {
+      97: '',
+      56: '0xdd83f61a437165b2c223a871d08862fbc7b1af57', // 2LC router
+    },
+    tokenSymbol: 'ECOIN',
+    tokenAddresses: {
+      97: '',
+      56: '0xeba66d75a2b3a832b1eaee03b83ffd91a38bb362',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 8,
+    risk: 5,
+    lpSymbol: 'ECOIN-BUSD',
+    lpAddresses: {
+      97: '',
+      56: '0xaace612f68b574fb839cdbe75b5241f4da8fe6eb', // 2LC router
+    },
+    tokenSymbol: 'ECOIN',
+    tokenAddresses: {
+      97: '',
+      56: '0xeba66d75a2b3a832b1eaee03b83ffd91a38bb362',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
   // {
   //   pid: 5,
   //   risk: 2,
