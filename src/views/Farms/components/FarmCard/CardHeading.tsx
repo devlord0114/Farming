@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag, Flex, Heading, Image } from '@pancakeswap-libs/uikit'
+import "@google/model-viewer";
 import Question from 'components/QuestionHelper'
 import { CommunityTag, CoreTag, NoFeeTag, RiskTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
@@ -12,6 +13,49 @@ export interface ExpandableSectionProps {
   depositFee?: number
   farmImage?: string
   tokenSymbol?: string
+}
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model-viewer': ModelViewerJSX & React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> ;
+    }
+  }
+}
+
+interface ModelViewerJSX {
+  src: string
+  poster?: string
+  alt?: string
+}
+
+interface ModelViewerElement extends Element {
+  model: {
+    materials: Array<{
+      name: string,
+      pbrMetallicRoughness: {
+        setBaseColorFactor: ((x: [number, number, number, number]) => void),
+        setMetallicFactor: ((x: number) => void),
+        setRoughnessFactor: ((x: number) => void),
+
+        baseColorTexture: null | {
+          texture: {
+            source: {
+              setURI: ((x: string) => void),
+            }
+          }
+        }
+        metallicRoughnessTexture: null | {
+          texture: {
+            source: {
+              setURI: ((x: string) => void),
+            }
+          }
+        }
+        // ... others
+      }
+    }>
+  }
 }
 
 const Wrapper = styled.div`
@@ -36,7 +80,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
 
   return (
     <Wrapper>
-      <Image src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} width={64} height={64} />
+      <model-viewer src={`/images/farms/${farmImage}.glb`} alt="A 3D model of an astronaut" ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls />
       <Flex flexDirection="column" alignItems="flex-start" mt="16px" mb="10px">
         <Flex>
           <Heading mb="4px">{lpLabel}</Heading>

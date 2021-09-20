@@ -43,3 +43,8 @@ code {
     url("./assets/fonts/swissli.ttf") format("truetype");
   font-weight: normal;
 }
+
+model-viewer {
+  width: 100px;
+  height: 100px;
+}
