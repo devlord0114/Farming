@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag, Flex, Heading, Image } from '@pancakeswap-libs/uikit'
-import "@google/model-viewer";
+import "@google/model-viewer/dist/model-viewer-umd"
 import Question from 'components/QuestionHelper'
 import { CommunityTag, CoreTag, NoFeeTag, RiskTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
