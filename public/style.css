@@ -45,6 +45,9 @@ code {
 }
 
 model-viewer {
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  top: -32px;
+  left: -32px;
 }

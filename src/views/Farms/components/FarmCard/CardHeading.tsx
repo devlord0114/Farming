@@ -81,7 +81,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <model-viewer src={`/images/farms/${farmImage}.glb`} alt="A 3D model of an astronaut" ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls />
-      <Flex flexDirection="column" alignItems="flex-start" mt="16px" mb="10px">
+      <Flex flexDirection="column" alignItems="flex-start" mt="70px" mb="10px">
         <Flex>
           <Heading mb="4px">{lpLabel}</Heading>
         </Flex>

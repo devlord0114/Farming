@@ -20,9 +20,11 @@
     // Start temporary rules
     // These rules are here just to keep the lint error to 0 during the migration to the new rule set
     // They need to be removed and fixed as soon as possible
+    "react/require-default-props": 0,
     "@typescript-eslint/ban-ts-comment": [1, { "ts-ignore": false, "ts-nocheck": false }],
     "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-namespace": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "radix": 0,
     "import/no-extraneous-dependencies": 0
