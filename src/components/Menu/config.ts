@@ -91,25 +91,25 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Rewards',
-    icon: 'AirdropIcon',
+    icon: 'RewardsIcon',
     href: '/airdrops',
     items: [
       {
         label: 'Airdrops',
         href: '/airdrops',
-        icon: 'L2L2LCIcon',
+        icon: 'AirdropIcon',
         disabled: true,
       },
       {
         label: 'Lottery',
         href: '/lottery',
-        icon: 'L2L2LCIcon',
+        icon: 'LotteryIcon',
         disabled: true,
       },
       {
         label: 'Prediction',
         href: '/prediction',
-        icon: 'L2L2LCIcon',
+        icon: 'PredictionIcon',
         disabled: true,
       },
     ],
