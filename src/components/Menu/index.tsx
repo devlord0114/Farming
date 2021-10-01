@@ -12,6 +12,11 @@ const Menu = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
+  
+  const redirect = () => {
+    window.open('https://exchange.2local.io/#/?simplex=true')
+  }
+  
 
   return (
     <UikitMenu
@@ -27,6 +32,9 @@ const Menu = (props) => {
       links={config}
       priceLink="https://pancakeswap.info/token/0xf0fcd737fce18f95621cc7841ebe0ea6efccf77e"
       {...props}
+        showBuyButton
+        showContractButton
+        onBuyCryptoWithSimplex={redirect}
     />
   )
 }
