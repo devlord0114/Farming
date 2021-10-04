@@ -32,9 +32,9 @@ const Menu = (props) => {
       links={config}
       priceLink="https://pancakeswap.info/token/0xf0fcd737fce18f95621cc7841ebe0ea6efccf77e"
       {...props}
-        showBuyButton
-        showContractButton
-        onBuyCryptoWithSimplex={redirect}
+      showBuyButton
+      showContractButton
+      onBuyCryptoWithSimplex={redirect}
     />
   )
 }

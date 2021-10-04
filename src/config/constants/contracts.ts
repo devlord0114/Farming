@@ -17,7 +17,7 @@ export default {
   },
   lottery: {
     56: '0x9c09015F3d068A0e5fA863848F83c43C458C3D7A',
-    97: '0xB786258FBcC289F9c09d985f16446AD612ADe6C7',
+    97: '',
   },
   lotteryNFT: {
     56: '0x54F6DDd40f2a8F4aE1a81bB01b89aB574f58f5EE',

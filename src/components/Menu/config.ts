@@ -85,7 +85,7 @@ const config: MenuEntry[] = [
         label: 'Multi-send',
         href: 'https://msend.2local.io/',
         icon: 'BNB2LCIcon',
-        disabled: true,
+        disabled: false,
       },
     ],
   },
