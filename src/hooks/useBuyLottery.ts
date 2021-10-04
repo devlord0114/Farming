@@ -1,3 +1,4 @@
+import BigNumber from 'bignumber.js'
 import { useCallback, useState, useEffect } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useLottery, useLotteryTicket } from 'hooks/useContract'
@@ -25,7 +26,7 @@ export const useMultiBuyLottery = () => {
   const lotteryContract = useLottery()
 
   const handleBuy = useCallback(
-    async (amount: string, numbers: Array<any>) => {
+    async (amount: BigNumber, numbers: Array<any>) => {
       try {
         const txHash = await multiBuy(lotteryContract, amount, numbers, account)
         return txHash

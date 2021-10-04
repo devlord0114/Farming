@@ -9,6 +9,9 @@ import {
   getMatchingRewardLength,
   getWinningNumbers,
   getTickets,
+  getWinningNumbersWithLotteryId,
+  getTotalPrizeWithLotteryId,
+  getMatchCountsWithLotteryId,
 } from '../utils/lotteryUtils'
 
 const useTickets = (lotteryNumber = null) => {
@@ -75,7 +78,7 @@ export const useTotalClaim = () => {
 }
 
 export const useWinningNumbers = () => {
-  const [winngNumbers, setWinningNumbers] = useState([0, 0, 0, 0])
+  const [winngNumbers, setWinningNumbers] = useState([0, 0, 0, 0, 0, 0])
   const lotteryContract = useLottery()
   const { fastRefresh } = useRefresh()
 
@@ -91,6 +94,63 @@ export const useWinningNumbers = () => {
   }, [fastRefresh, lotteryContract, setWinningNumbers])
 
   return winngNumbers
+}
+
+export const useWinningNumbersWithLotteryId = (lotteryId) => {
+  const [winngNumbers, setWinningNumbers] = useState([0, 0, 0, 0, 0, 0])
+  const lotteryContract = useLottery()
+  const { fastRefresh } = useRefresh()
+
+  useEffect(() => {
+    const fetchBalance = async () => {
+      const rewards = await getWinningNumbersWithLotteryId(lotteryContract, lotteryId)
+      setWinningNumbers(rewards)
+    }
+
+    if (lotteryContract) {
+      fetchBalance()
+    }
+  }, [fastRefresh, lotteryContract, setWinningNumbers, lotteryId])
+
+  return winngNumbers
+}
+
+export const useTotalPrizeWithLotteryId = (lotteryId) => {
+  const [rewards, setRewards] = useState(new BigNumber(0))
+  const lotteryContract = useLottery()
+  const { fastRefresh } = useRefresh()
+
+  useEffect(() => {
+    const fetchBalance = async () => {
+      const res = await getTotalPrizeWithLotteryId(lotteryContract, lotteryId)
+      setRewards(new BigNumber(res))
+    }
+
+    if (lotteryContract) {
+      fetchBalance()
+    }
+  }, [lotteryContract, fastRefresh, lotteryId])
+
+  return rewards
+}
+
+export const useMatchCountsWithLotteryId = (lotteryId) => {
+  const [matchCounts, setMatchCounts] = useState([0, 0, 0, 0, 0, 0])
+  const lotteryContract = useLottery()
+  const { fastRefresh } = useRefresh()
+
+  useEffect(() => {
+    const fetchBalance = async () => {
+      const res = await getMatchCountsWithLotteryId(lotteryContract, lotteryId)
+      setMatchCounts(res)
+    }
+
+    if (lotteryContract) {
+      fetchBalance()
+    }
+  }, [lotteryContract, fastRefresh, lotteryId])
+
+  return matchCounts
 }
 
 export const useMatchingRewardLength = (numbers) => {
