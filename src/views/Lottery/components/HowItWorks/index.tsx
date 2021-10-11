@@ -34,6 +34,19 @@ const Title = styled(Text)`
 const StepCards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 const HowItWorks = () => {

@@ -28,6 +28,20 @@ const Wrapper = styled(Flex)`
   border-radius: 32px;
   padding: 20px 100px;
   margin-bottom: 30px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    padding: 10px 20px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    padding: 10px 40px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    padding: 15px 60px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    padding: 15px 80px;
+  }
+
 `
 
 const RowBetween = styled(Flex)`

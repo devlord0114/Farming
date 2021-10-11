@@ -23,6 +23,31 @@ const FullWidthText = styled(Text)`
 const WinningNumber = styled(Text)`
   font: normal normal bold 16px/35px Swis721 BT;
   color: #ffffff;
+  min-width: 35px;
+  max-width: 35px;
+  height: 35px;
+  background: transparent linear-gradient(180deg, #53A8F0 0%, #2D7FC4 100%);
+  text-align: center;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-right: 0px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    margin-left: 5px;
+    margin-right: 0px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    margin-left: 5px;
+    margin-right: 0px;
+  }
 `
 
 const DisplayValue = styled(Text)`
@@ -32,12 +57,25 @@ const DisplayValue = styled(Text)`
 `
 
 const NumberArea = styled.div`
-  width: 50px;
-  height: 35px;
-  background: transparent linear-gradient(180deg, #53A8F0 0%, #2D7FC4 100%);
-  text-align: center;
-  border-radius: 50px;
-  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+`
+
+const StyledFlex = styled(Flex)`
+  display: flex;
+  flex-direction: row;
+  ${({ theme }) => theme.mediaQueries.xs} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    flex-direction: row;
+  }
 `
 
 const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, winning, ...props }) => {
@@ -46,11 +84,9 @@ const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, 
     if (winning) {
       const numbers = valueToDisplay.split(',')
       return numbers.map((number) => (
-        <NumberArea>
-          <WinningNumber>
-            {number}
-          </WinningNumber>
-        </NumberArea>
+        <WinningNumber>
+          {number}
+        </WinningNumber>
       ))
     }
 
@@ -58,12 +94,14 @@ const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, 
   }
 
   return (
-    <Flex justifyContent="space-between">
+    <StyledFlex>
       <FullWidthText >
         {children}
       </FullWidthText>
-      {renderValue()}
-    </Flex>
+      <NumberArea>
+        {renderValue()}
+      </NumberArea>
+    </StyledFlex>
   )
 }
 

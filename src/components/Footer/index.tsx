@@ -35,6 +35,19 @@ const StyledFooter = styled.div`
   margin-bottom: 50px;
   margin-left: 70px;
   width: 90%;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-left: 30px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-left: 40px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    margin-left: 50px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    margin-left: 60px;
+  }
 `
 
 const Divider = styled.div`

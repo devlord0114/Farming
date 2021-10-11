@@ -21,15 +21,58 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: column;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    flex-direction: row;
+  }
 `
 
 const Content = styled.div`
   width: 70%;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    width: 100%;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 90%;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 80%;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    width: 70%;
+  }
 `
 
 const Prize = styled.div`
   width: 25%;
-  align-self: start;
+  margin-top: 0px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    width: 100%;
+    margin-top: 24px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 90%;
+    margin-top: 24px;
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 80%;
+    margin-top: 24px;
+  }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    width: 25%;
+    margin-top: 0px;
+  }
 `
 
 export const Title = styled(Text)`
