@@ -18,8 +18,9 @@ const Index = styled(Text)`
   text-align: right;
   font: normal normal bold 16px/26px Swis721 BT;
   letter-spacing: 0px;
-  color: #1D2943;
+  color: #53A8F0;
   opacity: 1;
+  margin-right: 20px;
 `
 
 const Title = styled(Text)`
@@ -40,8 +41,10 @@ const StepCard: React.FC<Props> = ({index, title, description}) => {
 
   return (
     <LayoutWrapper>
-      <Index fontSize="16px">{index}</Index>
-      <Title fontSize="16px">{title}</Title>
+      <Flex justifyContent="space-between">
+        <Title fontSize="16px">{title}</Title>
+        <Index fontSize="16px">{`Step ${index}`}</Index>
+      </Flex>
       <Description fontSize="16px">{description}</Description>
     </LayoutWrapper>
   )
