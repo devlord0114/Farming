@@ -1060,7 +1060,6 @@ contract Lottery is LotteryOwnable, Initializable {
     uint8 public maxNumber;
     // minPrice, if decimal is not 18, please reset it
     uint256 public minPrice;
-
     // =================================
 
     // lotteryId => winningNumbers[numbers]
@@ -1073,10 +1072,14 @@ contract Lottery is LotteryOwnable, Initializable {
     mapping (address => uint256[]) public userInfo;
     // lotteryId => matchNumber
     mapping (uint256 => uint8[6]) public historyCounts;
+    // week number => address => isBought
+    mapping (uint256 => mapping (address => bool)) public buyHistory;
 
     uint256 public lotteryId = 0;
     uint256 public totalAddresses = 0;
     uint256 public totalAmount = 0;
+
+    uint256 public startTimestamp;
     uint256 public lastTimestamp;
 
     uint8[6] private winningNumbers;
@@ -1111,6 +1114,7 @@ contract Lottery is LotteryOwnable, Initializable {
         minPrice = _minPrice;
         maxNumber = _maxNumber;
         adminAddress = _adminAddress;
+        startTimestamp = block.timestamp;
         lastTimestamp = block.timestamp;
         allocation = [40, 25, 15, 10, 7, 3];
         matchingCounts = [0, 0, 0, 0, 0, 0];
@@ -1299,6 +1303,8 @@ contract Lottery is LotteryOwnable, Initializable {
     function buy(uint256 _price, uint8[6] memory _numbers) external {
         require(!drawingPhase, 'drawing, can not buy now');
         require (_price >= minPrice, 'price must above minPrice');
+        require(buyHistory[lotteryId][msg.sender] != true, 'can not buy');
+        buyHistory[lotteryId][msg.sender] = true;
         for (uint i = 0; i < 6; i++) {
             require (_numbers[i] < maxNumber, 'exceed number scope');
         }
@@ -1320,6 +1326,8 @@ contract Lottery is LotteryOwnable, Initializable {
     function  multiBuy(uint256 _price, uint8[6][] memory _numbers) external {
         require(!drawingPhase, 'drawing, can not buy now');
         require (_price >= minPrice, 'price must above minPrice');
+        require(buyHistory[lotteryId][msg.sender] != true, 'can not buy');
+        buyHistory[lotteryId][msg.sender] = true;
         uint256 totalPrice  = 0;
         for (uint i = 0; i < _numbers.length; i++) {
             for (uint j = 0; j < 6; j++) {
