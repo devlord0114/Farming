@@ -70,9 +70,9 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Trading Pools',
-        href: 'https://exchange.2local.io/#/trading',
+        href: 'https://trading.2local.io/',
         icon: 'BETH2LCIcon',
-        disabled: true,
+        disabled: false,
       },
       {
         label: 'Staking Pools',
