@@ -35,12 +35,12 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   {
-    pid: 5,
+    pid: 9,
     risk: 3,
     lpSymbol: 'BNB-BUSD',
     lpAddresses: {
       97: '',
-      56: '0x949285d7ebb74f6d2fdbefc60d19e619a8a5dfce', // 2LC router
+      56: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16', // 2LC router
     },
     tokenSymbol: 'BNB',
     tokenAddresses: {
