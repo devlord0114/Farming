@@ -11,6 +11,7 @@ import TicketCard from './components/TicketCard'
 import TotalPrizesCard from './components/TotalPrizesCard'
 import WinningNumbers from './components/WinningNumbers'
 import PrizeGrid from './components/PrizeGrid'
+import LotteryProgress from './components/LotteryProgress'
 
 const NextCard = styled(BaseLayout)`
   display: flex;
@@ -94,7 +95,7 @@ const NextDrawPage: React.FC = () => {
     <Wrapper justifyContent="space-between">
       <RowBetween>
         <Title>Get your ticket now</Title>
-        <Time>7h 5m until the draw</Time>
+        <LotteryProgress />
       </RowBetween>
       <InfoArea>
         <DrawInfo>

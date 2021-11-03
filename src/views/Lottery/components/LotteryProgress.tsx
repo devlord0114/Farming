@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Text, WinningProgress } from '@pancakeswap-libs/uikit'
-import { Text} from '@pancakeswap-libs/uikit'
+import { Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import { useLottery } from 'hooks/useContract'
@@ -16,11 +15,9 @@ import {
 
 const ProgressWrapper = styled.div`
   display: block;
-  width: 80%;
 `
 
 const TopTextWrapper = styled.div`
-  margin-top: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,11 +32,10 @@ const BottomTextWrapper = styled.div`
 `
 
 const StyledPrimaryText = styled(Text)`
-  margin-right: 16px;
-  font-family: ccbiffbamboom, sans-serif;
-  font-style: italic;
-  font-weight: 700;
-  color: #000000;
+  margin-left: 16px;
+  font: normal normal bold 16px/30px Swis721 BT;
+  letter-spacing: 0.4px;
+  color: #1D2943;
 `
 
 const ProgressBarArea = styled.div`
@@ -59,9 +55,6 @@ const LotteryProgress = () => {
 
   return (
     <ProgressWrapper>
-      {/* <ProgressBarArea>
-        <WinningProgress primaryStep={getLotteryDrawStep(currentMillis, lotteryId)} secondaryStep={getTicketSaleStep()} showProgressBunny />
-      </ProgressBarArea> */}
       <TopTextWrapper>
         <StyledPrimaryText fontSize="20px" bold color="contrast">
           {lotteryHasDrawn ? timeUntilTicketSale : timeUntilLotteryDraw}
