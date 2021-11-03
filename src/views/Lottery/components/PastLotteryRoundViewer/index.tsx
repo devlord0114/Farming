@@ -64,7 +64,7 @@ const PastLotteryRoundViewer = () => {
       <PastRoundCard error={error} lotteryNumber={state.lotteryId} winNumbers={winNumbers} totalPrize={totalPrize.div(new BigNumber(10).pow(18)).toNumber()} matchCounts={matchCounts} />
       <ExpandableSectionButton onClick={() => setShowFooter(!showFooter)} expanded={showFooter} />
       <ExpandingWrapper showFooter={showFooter}>
-        <PrizeGrid totalPrize={totalPrize.div(new BigNumber(10).pow(18)).toNumber()} />
+        <PrizeGrid totalPrize={totalPrize.div(new BigNumber(10).pow(18)).toNumber()} pastDraw />
       </ExpandingWrapper>
     </StyledCardBody>
   )

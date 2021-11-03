@@ -39,12 +39,11 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   matchCounts,
 }) => {
   const sixMatchesAmount = +((totalPrize / 100) * 40).toFixed(2)
-  const fiveMatchesAmount = +((totalPrize / 100) * 20).toFixed(2)
-  const fourMatchesAmount = +((totalPrize / 100) * 10).toFixed(2)
-  const threeMatchesAmount = +((totalPrize / 100) * 5).toFixed(2)
-  const twoMatchesAmount = +((totalPrize / 100) * 3).toFixed(2)
-  const oneMatchesAmount = +((totalPrize / 100) * 2).toFixed(2)
-  const burnAmount = +((totalPrize / 100) * 19).toFixed(2)
+  const fiveMatchesAmount = +((totalPrize / 100) * 25).toFixed(2)
+  const fourMatchesAmount = +((totalPrize / 100) * 15).toFixed(2)
+  const threeMatchesAmount = +((totalPrize / 100) * 10).toFixed(2)
+  const twoMatchesAmount = +((totalPrize / 100) * 7).toFixed(2)
+  const oneMatchesAmount = +((totalPrize / 100) * 3).toFixed(2)
   const TranslateString = useI18n()
 
   return (
@@ -72,7 +71,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedHeading size="lg">{matchCounts[5]}</RightAlignedHeading>
+          <RightAlignedHeading size="lg">{sixMatchesAmount}</RightAlignedHeading>
         </PastDrawGridItem>
       )}
       <GridItem>
@@ -84,7 +83,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedHeading size="md">{matchCounts[4]}</RightAlignedHeading>
+          <RightAlignedHeading size="md">{fiveMatchesAmount}</RightAlignedHeading>
         </PastDrawGridItem>
       )}
       <GridItem>
@@ -96,7 +95,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedHeading size="md">{matchCounts[3]}</RightAlignedHeading>
+          <RightAlignedHeading size="md">{fourMatchesAmount}</RightAlignedHeading>
         </PastDrawGridItem>
       )}
       <GridItem>
@@ -108,7 +107,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedText bold>{matchCounts[2]}</RightAlignedText>
+          <RightAlignedText bold>{threeMatchesAmount}</RightAlignedText>
         </PastDrawGridItem>
       )}
       <GridItem>
@@ -120,7 +119,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedText>{matchCounts[1]}</RightAlignedText>
+          <RightAlignedText>{twoMatchesAmount}</RightAlignedText>
         </PastDrawGridItem>
       )}
       <GridItem>
@@ -132,28 +131,12 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem marginBottom="20px">
-          <RightAlignedText>{matchCounts[0]}</RightAlignedText>
+          <RightAlignedText>{oneMatchesAmount}</RightAlignedText>
         </PastDrawGridItem>
       )}
       <GridItem marginBottom="20px">
         <RightAlignedText>{oneMatchesAmount.toLocaleString()}</RightAlignedText>
       </GridItem>
-      {/* Burn row */}
-      <GridItem marginBottom="0">
-        <Text>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}:</Text>
-      </GridItem>
-      {pastDraw ? (
-        <>
-          <GridItem marginBottom="0" />
-          <GridItem marginBottom="0">
-            <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
-          </GridItem>
-        </>
-      ) : (
-        <GridItem marginBottom="0">
-          <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
-        </GridItem>
-      )}
     </Grid>
   )
 }
