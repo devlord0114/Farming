@@ -1,14 +1,11 @@
 import getTimePeriods from 'utils/getTimePeriods'
 
-const getNextLotteryDrawTime = (currentMillis, lotteryId) => {
+export const getNextLotteryDrawTime = (currentMillis, lotteryId) => {
   const date = new Date(currentMillis)
   const currentHour = date.getUTCHours()
   const currentDay = date.getUTCDay()
-  const nextLotteryHour = 14
-  const nextLotteryDay = 0
-
-  console.log("pooh, currentDay = ", currentDay)
-  console.log("pooh, currentHour = ", currentHour)
+  const nextLotteryHour = 14 // 02:00 PM
+  const nextLotteryDay = 0 // Sun
 
   const isPass =  currentDay > nextLotteryDay || (currentDay === nextLotteryDay && currentHour >= nextLotteryHour)
   const tomorrow = new Date(currentMillis)
@@ -44,11 +41,11 @@ export const getLotteryDrawStep = (currentMillis, lotteryId) => {
   const endTime = getNextLotteryDrawTime(currentMillis, lotteryId)
   let msUntilLotteryDraw = endTime - currentMillis
   const count = Math.floor(msUntilLotteryDraw / msBetweenLotteries)
+
   if (msUntilLotteryDraw > msBetweenLotteries) {
     msUntilLotteryDraw -= msBetweenLotteries * count
   }
-  console.log("pooh, msUntilLotteryDraw = ", msUntilLotteryDraw)
-  console.log("pooh, msBetweenLotteries = ", msBetweenLotteries)
+
   const percentageRemaining = (msUntilLotteryDraw / msBetweenLotteries) * 100
   return 100 - percentageRemaining
 }

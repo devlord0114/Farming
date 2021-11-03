@@ -4,6 +4,7 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { BaseLayout, Card, CardFooter, Flex, Heading, Text } from '@pancakeswap-libs/uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalClaim, useTotalRewards } from 'hooks/useTickets'
+import { useCurrentTime } from 'hooks/useTimer'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import ExpandableSectionButton from 'components/ExpandableSectionButton/ExpandableSectionButton'
 import YourPrizesCard from './components/YourPrizesCard'
@@ -12,6 +13,7 @@ import TotalPrizesCard from './components/TotalPrizesCard'
 import WinningNumbers from './components/WinningNumbers'
 import PrizeGrid from './components/PrizeGrid'
 import LotteryProgress from './components/LotteryProgress'
+import { getNextLotteryDrawTime } from './helpers/CountdownHelpers'
 
 const NextCard = styled(BaseLayout)`
   display: flex;
@@ -88,8 +90,8 @@ const NextDrawPage: React.FC = () => {
   const isAWin = winnings > 0
   const lotteryPrizeAmount = +getBalanceNumber(useTotalRewards()).toFixed(0)
   const { currentLotteryNumber } = useContext(PastLotteryDataContext)
-
-  console.log("pooh, showFooter = ", showFooter)
+  const currentMillis = useCurrentTime()
+  const nextLotteryTime = getNextLotteryDrawTime(currentMillis, currentLotteryNumber)
 
   return (
     <Wrapper justifyContent="space-between">
@@ -100,7 +102,7 @@ const NextDrawPage: React.FC = () => {
       <InfoArea>
         <DrawInfo>
           <Heading size="md" mb="24px">Next Draw</Heading>
-          <Time>{`#${currentLotteryNumber}`} | Draw 20 Oct 2021 17.30</Time>
+          <Time>{`#${currentLotteryNumber}`} | Draw {(new Date(nextLotteryTime)).toLocaleString()}</Time>
         </DrawInfo>
         <NextCard>
           <TotalPrizesCard />
