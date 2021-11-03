@@ -88,6 +88,8 @@ const Lottery: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [currentLotteryNumber, setCurrentLotteryNumber] = useState(0)
   const [mostRecentLotteryNumber, setMostRecentLotteryNumber] = useState(1)
+  const [historyError, setHistoryError] = useState(false)
+  const [historyData, setHistoryData] = useState([])
 
   useEffect(() => {
     const getInitialLotteryIndex = async () => {
@@ -113,8 +115,12 @@ const Lottery: React.FC = () => {
         <Title>{TranslateString(290, 'Lottery')}</Title>
         <Wrapper>
           <Content>
-            <NextDrawPage />
-            <PastDrawsPage />
+            <PastLotteryDataContext.Provider
+              value={{ historyError, historyData, mostRecentLotteryNumber, currentLotteryNumber }} 
+            >
+              <NextDrawPage />
+              <PastDrawsPage />
+            </PastLotteryDataContext.Provider>
           </Content>
           <Prize>
             <YourPrizesCard />

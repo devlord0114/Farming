@@ -77,17 +77,9 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   }
 
   return (
-    <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
-      <TicketInput
-        value={val}
-        onSelectMax={handleSelectMax}
-        onChange={handleChange}
-        max={fullBalance}
-        symbol="TICKET"
-        availableSymbol="2LC"
-      />
+    <Modal title={TranslateString(999, 'Confirm to buy ticket')} onDismiss={onDismiss}>
       <div>
-        <Tips>{TranslateString(458, `1 Ticket = ${cakeAmount()} 2LC`)}</Tips>
+        <Tips>{`1 Ticket = ${cakeAmount()} 2LC`}</Tips>
       </div>
       <div>
         <Announce>
@@ -96,7 +88,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
             'Ticket purchases are final. Your 2LC cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} 2LC`)}</Final>
+        <Final>{`You will spend: ${cakeCosts(val).toFixed(2)} 2LC`}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>
@@ -124,7 +116,7 @@ export default BuyTicketModal
 
 const Tips = styled.div`
   margin-left: 0.4em;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   color: ${(props) => props.theme.colors.primary};
 `
