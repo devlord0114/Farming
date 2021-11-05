@@ -110,7 +110,7 @@ const config: MenuEntry[] = [
         label: 'Lottery',
         href: '/lottery',
         icon: 'LotteryIcon',
-        disabled: true,
+        disabled: false,
       },
       {
         label: 'Prediction',

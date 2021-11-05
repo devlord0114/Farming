@@ -26,7 +26,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   }, [max])
 
   const cakePrice = usePriceCakeBusd()
-  const tokenCountPerTicket = new BigNumber(5).div(cakePrice);
+  const tokenCountPerTicket = new BigNumber(10).div(cakePrice);
 
   const maxTickets = useMemo(() => {
     return parseInt(getFullDisplayBalance(max.div(new BigNumber(tokenCountPerTicket))))

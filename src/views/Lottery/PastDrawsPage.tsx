@@ -1,9 +1,10 @@
 import BigNumber from 'bignumber.js'
-import React, {useState} from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { BaseLayout, ButtonMenu, ButtonMenuItem, Flex, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useTotalPrizeWithLotteryId } from 'hooks/useTickets'
+import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import PastLotteryRoundViewer from './components/PastLotteryRoundViewer'
 import PastDrawsHistoryCard from './components/PastDrawsHistory/PastDrawsHistoryCard'
 
@@ -72,9 +73,21 @@ const StyledMenuItem = styled(ButtonMenuItem)`
 const PastDrawsPage: React.FC = () => {
   const TranslateString = useI18n()
   const [activeIndex, setActiveIndex] = useState(0)
+  const { currentLotteryNumber } = useContext(PastLotteryDataContext)
+  const [roundDatas, setRoundDatas] = useState([])
 
   const handleClick = (index) => {
     setActiveIndex(index)
+    console.log("pooh, index = ", index)
+    const rounds = []
+    if (activeIndex === 0) {
+      for (let i = 0; i <= currentLotteryNumber; i ++) {
+        rounds.push(i)
+      }
+    } else {
+      rounds.push(0)
+    }
+    setRoundDatas(rounds)
   }
 
   return (
