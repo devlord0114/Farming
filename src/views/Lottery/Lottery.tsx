@@ -25,12 +25,6 @@ const Wrapper = styled.div`
   ${({ theme }) => theme.mediaQueries.xs} {
     flex-direction: column;
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
-    flex-direction: column;
-  }
-  ${({ theme }) => theme.mediaQueries.md} {
-    flex-direction: column;
-  }
   ${({ theme }) => theme.mediaQueries.lg} {
     flex-direction: row;
   }

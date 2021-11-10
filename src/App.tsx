@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { ResetCSS } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js'
@@ -41,7 +41,7 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Farms />
             </Route>
-            <Route path="/lottery">
+            <Route exact path="/lottery">
               <Lottery />
             </Route>
             <Route component={NotFound} />
