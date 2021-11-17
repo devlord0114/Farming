@@ -57,7 +57,7 @@ const HowItWorks = () => {
       <Title>{TranslateString(999, 'How it works')}</Title>
       <StepCards>
         {config.map((item, i) => {
-          return <StepCard index={i} title={item.title} description={item.description} />
+          return <StepCard index={i + 1} title={item.title} description={item.description} />
         })}
       </StepCards>
     </LayoutWrapper>

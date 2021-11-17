@@ -1,7 +1,7 @@
 const config = [
   {
     title: 'Buy Ticket',
-    description: 'Lottery ticket prices are set at the start of the new lottery round, and target $5 USD (may vary slightly with sudden price fluctuations). Buying multiple Lottery tickets at once gives a bulk discount on your purchase. You can buy as many as 100 tickets in one purchase, with the discount starting small at 2 tickets, and scaling up to 4.95% at 100 tickets.',
+    description: 'Lottery ticket prices are set at the start of the new lottery round, and target $10 USD. You can buy only one ticket per rounds.',
   },
   {
     title: 'How To Win',

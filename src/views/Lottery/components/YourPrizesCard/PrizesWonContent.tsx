@@ -88,7 +88,7 @@ const PrizesWonContent: React.FC = () => {
         </Button>
       </StyledCardActions>
       <StyledButton variant="text" onClick={onPresentMyTickets}>
-        {TranslateString(432, 'View your tickets')}
+        {TranslateString(999, 'View your ticket')}
       </StyledButton>
     </StyledCardContentInner>
   )

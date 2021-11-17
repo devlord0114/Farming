@@ -22,6 +22,13 @@ const StyledText = styled(Heading)`
   margin-bottom: 10px;
 `
 
+const StyledTicketValue = styled(Heading)`
+  padding-left: 12px;
+  font: normal normal bold 24px/30px Swis721 BT;
+  margin-bottom: 10px;
+  color: orange;
+`
+
 const StyledTitle = styled(Heading)`
   text-align: center;
   font: normal normal normal 18px/32px Swis721 BT;
@@ -54,15 +61,28 @@ const NoPrizesContent: React.FC = () => {
   const TranslateString = useI18n()
   const tickets = useTickets()
   const [onPresentMyTickets] = useModal(<MyTicketsModal myTicketNumbers={tickets} from="buy" />)
+  const ticket = [1,2,3,4,5,6]
 
   return (
     <Wrapper>
       <StyledTitle>{TranslateString(999, 'The 2local Lottery')}</StyledTitle>
       <TextWrapper>
         <StyledText>{TranslateString(999, 'Sorry, no prizes to collect')}</StyledText>
-        <StyledButton onClick={onPresentMyTickets}>
-          {TranslateString(432, 'View your tickets')}
-        </StyledButton>
+        { tickets.length ? 
+          <>
+            <StyledText>
+              {TranslateString(999, 'Your ticket')}          
+            </StyledText>
+            <StyledTicketValue>
+              {tickets.toString()}
+            </StyledTicketValue>
+          </>
+          :
+          <StyledText>
+            {TranslateString(999, 'No ticket')}
+          </StyledText>
+        }
+        
       </TextWrapper>
     </Wrapper>
   )

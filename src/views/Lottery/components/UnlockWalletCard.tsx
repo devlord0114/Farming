@@ -42,19 +42,13 @@ const StyledUnlockButton = styled(UnlockButton)`
   }
 `
 
-const StyledDisconnectButton = styled(DisconnectButton)`
-  background: #DF642B;
+const StyledConnectedButton = styled.div`
+  background: green;
   border-radius: 12px;
-  font: normal normal bold 16px/6px Swis721 BT;
-  height: 46px;
-  margin-right: 20px;
-  color: #FFFFFF;
-  border: 1px solid #DF642B;
-
-  &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background: #DF642B;
-    color: #FFFFFF;
-  }
+  font: normal normal bold 16px/26px Swis721 BT;
+  padding: 10px 30px;
+  color: white;
+  border: 1px solid green;
 `
 
 
@@ -65,7 +59,7 @@ const UnlockWalletCard = () => {
   return (
     <StyledCardBody>
       <StyledHeading>{TranslateString(999, 'Connect  your walet to check if you have won!')}</StyledHeading>
-      { !account ? <StyledUnlockButton /> :  <StyledDisconnectButton /> }
+      { !account ? <StyledUnlockButton /> :  <StyledConnectedButton>Connected</StyledConnectedButton> }
     </StyledCardBody>
   )
 }
